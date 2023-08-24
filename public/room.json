@@ -1,0 +1,35 @@
+[
+    {
+      "_id": "1",
+      "title": "Junior Suite",
+      "picture": "https://i.postimg.cc/N031B16F/room-1.jpg",
+      "about": "Est dolor anim duis aliqua nulla tempor cillum eu enim irure amet sunt. Ex elit nostrud nulla consequat aute consectetur cupidatat nisi amet et Lorem ad qui aliquip. Commodo incididunt in Lorem eiusmod eiusmod adipisicing aute ipsum veniam non laboris fugiat. Labore amet ea ut veniam adipisicing ad sit labore non dolor veniam dolore. Consequat nulla nulla ut qui eu non mollit exercitation. Ut aute velit officia ea excepteur nisi cupidatat ad quis nostrud exercitation dolore nulla.\r\n",
+      "bad": "1 Bad",
+      "bath": "1 Bath",
+      "wifi": "Wifi",
+      "rating": "4.5",
+      "price": "$100/Night"
+    },
+    {
+      "_id": "2",
+      "title": "Executive Suite",
+      "picture": "https://i.postimg.cc/kG9Ktqhd/room-3.jpg",
+      "about": "Laboris laborum sit dolor ad duis irure ad magna qui. Nisi deserunt laborum aliquip tempor reprehenderit nostrud. Cillum amet aute dolor eu occaecat magna.\r\n",
+      "bad": "2 Bad",
+      "bath": "1 Bath",
+      "wifi": "Wifi",
+      "rating": "4.3",
+      "price": "$150/Night"
+    },
+    {
+      "_id": "3",
+      "title": "Super Deluxe",
+      "picture": "https://i.postimg.cc/JzdNdwtb/room-2.jpg",
+      "about": "Cillum magna ipsum mollit velit elit. Aliquip mollit aute nisi dolor duis aliqua aute eiusmod. Sit non fugiat officia ex aute eiusmod eiusmod sit non anim. Et ea ea sunt occaecat deserunt pariatur ea incididunt id aute magna.\r\n",
+      "bad": "3 Bad",
+      "bath": "2 Bath",
+      "wifi": "Wifi",
+      "rating": "4.6",
+      "price": "$200/Night"
+    }
+  ]
