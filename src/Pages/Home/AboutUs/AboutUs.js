@@ -18,8 +18,8 @@ const AboutUs = () => {
                         <img src={about4} alt="" className='border-2 border-amber-400 w-44' />
                     </div>
                     <div className='w-1/2'>
-                        <h3 className='text-xl mb-5 font-bold text-amber-500'>ABOUT US</h3>
-                        <h1 className="text-5xl font-bold">Welcome to <span className='text-amber-500'>HOTELIER</span></h1>
+                        <h3 className='text-xl lg:text-2xl mb-5 font-bold text-amber-500'>ABOUT US</h3>
+                        <h1 className="text-3xl lg:text-5xl font-bold">Welcome to <span className='text-amber-500'>HOTELIER</span></h1>
                         <p className="py-6">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                         <div>
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
