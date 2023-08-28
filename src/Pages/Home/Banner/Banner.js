@@ -8,11 +8,11 @@ const Banner = () => {
         <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
                 <div className='slide1-img'>
-                    <img src={slide1} alt='' className="w-full h-full bg-blend-darken" />
+                    <img src={slide1} alt='' className="w-full " />
                 </div>
                 <div className='hidden lg:block absolute  flex-col transform -translate-y-1/2  lg:left-1/3  top-1/2 text-white'>
-                    <h4 className='text-center font-bold'>LUXURY LIVING</h4>
-                    <h1 className='lg:text-6xl font-bold'>Discover A Brand <br /> <span className='lg:ml-5'>Luxurious Hotel</span></h1>
+                    <h4 className='text-center font-bold text-2xl'>LUXURY LIVING</h4>
+                    <h1 className='lg:text-6xl font-bold text-amber-500'>Discover A Brand <br /> <span className='lg:ml-5'>Luxurious Hotel</span></h1>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide2" className="btn btn-circle">❮</a>
