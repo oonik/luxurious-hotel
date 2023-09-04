@@ -7,6 +7,7 @@ const Navbar = () => {
       <li className='text-white hover:text-amber-500 text-xl'><Link to='/'>Home</Link></li>
       <li className='text-white hover:text-amber-500 text-xl'><Link to='/ourRoom'>Room</Link></li>
       <li className='text-white hover:text-amber-500 text-xl'><Link to='/about'>About</Link></li>
+      <li className='text-white hover:text-amber-500 text-xl'><Link to='/login'>Login</Link></li>
     </>
     return (
         <div className="navbar bg-slate-900 lg:p-5">
