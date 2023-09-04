@@ -1,13 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
 import RoomCard from './RoomCard/RoomCard';
 import Loading from '../../Shared/Loading/Loading';
+import { useState } from 'react';
+import BookingModal from '../../Shared/BookingModal/BookingModal';
 
 const OurRoom = () => {
-
+    const [room, setRoom] = useState(null);
     const { data: rooms = [], isLoading } = useQuery({
         queryKey: ['rooms'],
         queryFn: async () => {
-            const res = await fetch('room.json')
+            const res = await fetch('http://localhost:5000/rooms')
             const data = await res.json();
             return data;
         }
@@ -26,9 +28,15 @@ const OurRoom = () => {
                     rooms?.map(room => <RoomCard
                         key={room._id}
                         room={room}
+                        setRoom={setRoom}
                     ></RoomCard>)
                 }
             </div>
+            {
+                room && <BookingModal
+                room={room}
+                ></BookingModal>
+            }
         </div>
     );
 };

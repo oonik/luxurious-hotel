@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Star from '../../../Shared/Star/Star';
 import { FaBath, FaBed } from 'react-icons/fa';
 import { AiOutlineWifi } from "react-icons/ai";
+import { Link } from 'react-router-dom';
+import RoomCardDetails from './RoomCardDetails';
 
-const RoomCard = ({ room }) => {
-    const { title, picture, about, bad, bath, wifi, rating, price } = room;
+const RoomCard = ({ room, setRoom}) => {
+    const { title, picture, about, bad, bath, wifi, rating, price, _id } = room;
+
     return (
         <div>
             <div className="card rounded-none bg-base-100 shadow-xl">
@@ -29,8 +32,12 @@ const RoomCard = ({ room }) => {
                     </div>
                     <p>{about.length > 100 ? about.slice(0, 100) + '...' : about}</p>
                     <div className="card-actions justify-around">
-                        <button className="btn bg-amber-500 text-white btn-sm rounded-none ">VIEW DETAIL</button>
-                        <button className="btn bg-black text-white btn-sm rounded-none">BOOK NOW</button>
+                        <Link to={`/roomcarddetails/${_id}`}>
+                            <button className="btn bg-amber-500 text-white btn-sm rounded-none ">VIEW DETAIL</button>
+                        </Link>
+                        <label htmlFor="booking_modal"
+                        onClick={()=> setRoom(room)} 
+                        className="btn bg-black text-white btn-sm rounded-none">BOOK NOW</label>
                     </div>
                 </div>
             </div>
