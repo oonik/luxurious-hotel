@@ -1,6 +1,7 @@
 import AboutUs from "../../Pages/Home/AboutUs/AboutUs";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
+import Signup from "../../Pages/Login/Signup";
 import OurRoom from "../../Pages/OurRoom/OurRoom";
 import RoomCardDetails from "../../Pages/OurRoom/RoomCard/RoomCardDetails";
 import Main from "../../layout/Main";
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
         {
           path: '/login',
           element: <Login></Login>
+        },
+        {
+          path: '/signup',
+          element: <Signup></Signup>
         }
       ]
     }

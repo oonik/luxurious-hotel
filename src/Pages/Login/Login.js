@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -39,6 +40,7 @@ const Login = () => {
                             <button className="btn bg-amber-500 text-white">Login</button>
                         </div>
                     </form>
+                    <p className='text-center pb-2'>Don't have an account? <Link to="/signup" className='text-amber-500'>Signup</Link></p>
                 </div>
             </div>
         </div>
