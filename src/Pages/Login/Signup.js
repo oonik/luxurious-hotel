@@ -1,23 +1,54 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useToken from '../../hook/useToken';
 
 const Signup = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const {createUser} = useContext(AuthContext);
     const [error, setError] = useState("");
+    const [createUserEmail, setCreateUserEmail] = useState('');
+    const [token] = useToken(createUserEmail);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
+
+    if(token){
+        navigate(from, {replace: true})
+    };
 
     const handleSignup = data =>{
         createUser(data.email, data.password)
         .then(result =>{
             const user = result.user;
-            console.log(user)
+            // console.log(user);
+            saveUser(data.name, data.email);
         })
         .catch((error) => {
             setError(error.message)
           });
-    }
+    };
+
+    const saveUser = (name, email)=>{
+        const user = {
+            name,
+            email
+        };
+        fetch('http://localhost:5000/users', {
+            method: "POST",
+            headers: {
+                "content-type":"application/json"
+            },
+            body: JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log('save user', data)
+            setCreateUserEmail(email);
+        });
+    };
     return (
         <div className="hero min-h-screen bg-black">
         <div className="hero-content">

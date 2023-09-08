@@ -1,10 +1,14 @@
+import MyBooking from "../../Pages/Dashboard/MyBooking/MyBooking";
 import AboutUs from "../../Pages/Home/AboutUs/AboutUs";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Signup from "../../Pages/Login/Signup";
 import OurRoom from "../../Pages/OurRoom/OurRoom";
 import RoomCardDetails from "../../Pages/OurRoom/RoomCard/RoomCardDetails";
+import BookingModal from "../../Shared/BookingModal/BookingModal";
+import DashboardLayout from "../../layout/DashboardLayout";
 import Main from "../../layout/Main";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -37,6 +41,16 @@ export const router = createBrowserRouter([
         {
           path: '/signup',
           element: <Signup></Signup>
+        }
+      ]
+    },
+    {
+      path: '/dashboard',
+      element: <DashboardLayout></DashboardLayout>,
+      children: [
+        {
+          path: '/dashboard/myBookings',
+          element: <MyBooking></MyBooking>
         }
       ]
     }
