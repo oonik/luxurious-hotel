@@ -5,17 +5,40 @@ import about3 from '../../../assets/img/about-3.jpg';
 import about4 from '../../../assets/img/about-4.jpg';
 import { FaHotel } from 'react-icons/fa';
 import { FaUsers, FaUsersGear } from "react-icons/fa6";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AboutUs = () => {
+    AOS.init();
     return (
         <section>
             <div className="hero mt-10">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-10">
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                        <img src={about1} alt="" className='border-2 border-amber-400 w-44'/>
-                        <img src={about2} alt="" className='border-2 border-amber-400 w-44' />
-                        <img src={about3} alt="" className='border-2 border-amber-400 w-44' />
-                        <img src={about4} alt="" className='border-2 border-amber-400 w-44' />
+                        <figure
+                            data-aos="flip-left"
+                            data-aos-duration="3000"
+                            className='overflow-hidden'>
+                            <img src={about1} alt="" className='border-2 border-amber-400 w-44 hover:scale-125 transition duration-500 cursor-pointer' />
+                        </figure>
+                        <figure
+                            data-aos="flip-left"
+                            data-aos-duration="3000"
+                            className='overflow-hidden'>
+                            <img src={about2} alt="" className='border-2 border-amber-400 w-44 hover:scale-125 transition duration-500 cursor-pointer' />
+                        </figure>
+                        <figure
+                            data-aos="flip-left"
+                            data-aos-duration="3000"
+                            className='overflow-hidden'>
+                            <img src={about3} alt="" className='border-2 border-amber-400 w-44 hover:scale-125 transition duration-500 cursor-pointer' />
+                        </figure>
+                        <figure
+                            data-aos="flip-left"
+                            data-aos-duration="3000"
+                            className='overflow-hidden'>
+                            <img src={about4} alt="" className='border-2 border-amber-400 w-44 hover:scale-125 transition duration-500 cursor-pointer' />
+                        </figure>
                     </div>
                     <div className='w-1/2'>
                         <h3 className='text-xl lg:text-2xl mb-5 font-bold text-amber-500'>ABOUT US</h3>

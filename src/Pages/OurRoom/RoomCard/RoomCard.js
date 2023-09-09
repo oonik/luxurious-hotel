@@ -1,18 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Star from '../../../Shared/Star/Star';
 import { FaBath, FaBed } from 'react-icons/fa';
 import { AiOutlineWifi } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-import RoomCardDetails from './RoomCardDetails';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const RoomCard = ({ room, setRoom}) => {
+const RoomCard = ({ room, setRoom }) => {
     const { title, picture, about, bad, bath, wifi, rating, price, _id } = room;
-
+    AOS.init();
     return (
-        <div>
+        <div
+            data-aos="zoom-in"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+        >
             <div className="card rounded-none bg-base-100 shadow-xl">
                 <div className='relative'>
-                    <figure><img src={picture} alt="Shoes" /></figure>
+                    <figure><img src={picture} alt="Shoes" className='hover:scale-125 transition duration-500 cursor-pointer' /></figure>
                     <p className='bg-amber-500 w-24 text-center text-white rounded absolute lg:top-52 left-3'>{price}</p>
                 </div>
                 <div className="card-body">
@@ -36,8 +41,8 @@ const RoomCard = ({ room, setRoom}) => {
                             <button className="btn bg-amber-500 text-white btn-sm rounded-none ">VIEW DETAIL</button>
                         </Link>
                         <label htmlFor="booking_modal"
-                        onClick={()=> setRoom(room)} 
-                        className="btn bg-black text-white btn-sm rounded-none">BOOK NOW</label>
+                            onClick={() => setRoom(room)}
+                            className="btn bg-black text-white btn-sm rounded-none">BOOK NOW</label>
                     </div>
                 </div>
             </div>

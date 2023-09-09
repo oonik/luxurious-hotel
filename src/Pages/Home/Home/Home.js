@@ -6,6 +6,7 @@ import LuxuryLiving from '../LuxuryLiving/LuxuryLiving';
 import OurServices from '../OurServices/OurServices';
 import ClientSay from '../ClientSay/ClientSay';
 import OurTeam from '../OurTeam/OurTeam';
+import OurPartner from '../OurPartner/OurPartner';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <OurRoom></OurRoom>
             <LuxuryLiving></LuxuryLiving>
             <OurServices></OurServices>
+            <OurPartner></OurPartner>
             <ClientSay></ClientSay>
             <OurTeam></OurTeam>
         </div>

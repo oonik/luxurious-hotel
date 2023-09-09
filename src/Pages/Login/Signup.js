@@ -23,7 +23,7 @@ const Signup = () => {
         createUser(data.email, data.password)
         .then(result =>{
             const user = result.user;
-            // console.log(user);
+            //  console.log(user);
             saveUser(data.name, data.email);
         })
         .catch((error) => {
