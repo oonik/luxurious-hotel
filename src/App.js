@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-    <div className="className='max-w-[1440px] mx-auto overflow-hidden'">
+    <div className="">
       <RouterProvider router={router}></RouterProvider>
       <ToastContainer/>
     </div>

@@ -1,6 +1,7 @@
 import AllUsers from "../../Pages/Dashboard/AllUsers/AllUsers";
 import MyBooking from "../../Pages/Dashboard/MyBooking/MyBooking";
 import AboutUs from "../../Pages/Home/AboutUs/AboutUs";
+import ContactUs from "../../Pages/Home/ContactUs/ContactUs";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Signup from "../../Pages/Login/Signup";
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
           path: '/roomcarddetails/:id',
           element: <RoomCardDetails></RoomCardDetails>,
           loader: ({params}) => fetch(`http://localhost:5000/room/${params.id}`)
+        },
+        {
+          path: '/contactUs',
+          element: <ContactUs></ContactUs>
         },
         {
           path: '/login',

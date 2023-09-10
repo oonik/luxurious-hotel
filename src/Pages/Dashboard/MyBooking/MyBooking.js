@@ -20,66 +20,71 @@ const MyBooking = () => {
             return data;
         }
     });
-     // Delete book item
-    const handleDeleteBooking = (id) =>{
+    // Delete book item
+    const handleDeleteBooking = (id) => {
         fetch(`http://localhost:5000/booking/${id}`, {
             method: "DELETE",
             headers: {
-                authorization : `bearer ${localStorage.getItem('accessToken')}`
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
             },
         })
-        .then(res => res.json())
-        .then(data => {
-            if(data.deletedCount > 0){
-                refetch();
-            };
-        });
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    refetch();
+                };
+            });
     };
-  
+
     if (isLoading) {
         return <Loading></Loading>
     };
     return (
         <div>
 
-            <div className="overflow-x-auto">
-                <table className="table table-auto">
-                    <thead>
+            <div className="relative overflow-x-auto">
+                <table className="w-full text-sm text-left text-gray-500">
+                    <thead className='text-xs text-gray-700 uppercase bg-gray-50'>
                         <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Check In Date</th>
-                            <th>Check Out Date</th>
-                            <th>Email</th>
-                            <th>Action</th>
+                            <th scope="col" className='px-6 py-3'></th>
+                            <th scope="col" className='px-6 py-3'>Name</th>
+                            <th scope="col" className='px-6 py-3'>Check In Date</th>
+                            <th scope="col" className='px-6 py-3'>Check Out Date</th>
+                            <th scope="col" className='px-6 py-3'>Email</th>
+                            <th scope="col" className='px-6 py-3'>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            bookings?.map((book, i) => <tr key={book._id}>
-                                <th>{i + 1}</th>
-                                <td>{book.name}</td>
-                                <td>{book.dateIn}</td>
-                                <td>{book.dateOut}</td>
-                                <td>{book.email}</td>
-                                <td>
-                                <label 
-                                onClick={()=>setBook(book)} 
-                                htmlFor="confirmation_modal"
-                                className="btn btn-sm bg-amber-500">Delete</label>
+                            bookings?.map((book, i) => <tr
+                                key={book._id}
+                                className='bg-white border-b'
+                                >
+                                <th scope="row" className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap'>
+                                    {i + 1}
+                                </th>
+                                <td className='px-6 py-4'>{book.name}</td>
+                                <td className='px-6 py-4'>{book.dateIn}</td>
+                                <td className='px-6 py-4'>{book.dateOut}</td>
+                                <td className='px-6 py-4'>{book.email}</td>
+                                <td className='px-6 py-4'>
+                                    <label
+                                        onClick={() => setBook(book)}
+                                        htmlFor="confirmation_modal"
+                                        className="btn btn-sm bg-amber-500">Delete</label>
                                 </td>
                             </tr>)
                         }
                     </tbody>
                 </table>
             </div>
-          {
-            book &&  <ConfirmationModal
-            title={`Are you sure you want delete ${book.name}?`}
-            description={'You can delete it do not undo'}
-            handleDelete={()=> handleDeleteBooking(book._id)}
-            ></ConfirmationModal>
-          }
+            {
+                book && <ConfirmationModal
+                    title={`Are you sure you want delete ${book.name}?`}
+                    description={'You can delete it do not undo'}
+                    handleDelete={() => handleDeleteBooking(book._id)}
+                ></ConfirmationModal>
+            }
         </div>
     );
 };

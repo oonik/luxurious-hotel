@@ -7,6 +7,8 @@ import OurServices from '../OurServices/OurServices';
 import ClientSay from '../ClientSay/ClientSay';
 import OurTeam from '../OurTeam/OurTeam';
 import OurPartner from '../OurPartner/OurPartner';
+import Map from '../../../Shared/Map/Map';
+import ContactUs from '../ContactUs/ContactUs';
 
 const Home = () => {
     return (
@@ -19,6 +21,7 @@ const Home = () => {
             <OurPartner></OurPartner>
             <ClientSay></ClientSay>
             <OurTeam></OurTeam>
+            <ContactUs></ContactUs>
         </div>
     );
 };

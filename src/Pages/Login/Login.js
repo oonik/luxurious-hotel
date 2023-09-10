@@ -41,7 +41,7 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="text" placeholder="email" 
+                            <input type="email" placeholder="email" 
                             {...register("email", { required: "Email is required" })} 
                             className="input input-bordered" />
                             {errors.email && <p role="alert" className='text-red-500'>{errors.email?.message}</p>}

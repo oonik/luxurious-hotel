@@ -1,5 +1,6 @@
 import React from 'react';
 import img from '../../../assets/img/video.jpg'
+import { Link } from 'react-router-dom';
 
 const LuxuryLiving = () => {
     return (
@@ -11,8 +12,8 @@ const LuxuryLiving = () => {
                     <h1 className="text-3xl lg:text-5xl font-bold text-white">Discover A Brand Luxurious Hotel</h1>
                     <p className="py-6 text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                     <div className='flex justify-center items-center lg:justify-start'>
-                        <button className="btn bg-black text-white btn-md rounded-none px-6">OUR ROOMS</button>
-                        <button className="btn btn-warning btn-md rounded-none ml-4">BOOK A ROOM</button>
+                        <button className="btn bg-black text-white btn-md rounded-none px-6"><Link to='/ourRoom'>OUR ROOMS</Link></button>
+                        <button className="btn btn-warning btn-md rounded-none ml-4"><Link to='/contactUs'>CONTACT US</Link></button>
                     </div>
                 </div>
             </div>

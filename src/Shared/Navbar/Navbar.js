@@ -21,6 +21,7 @@ const Navbar = () => {
         <li className='text-white hover:text-amber-500 text-xl'><Link to='/ourRoom'>Room</Link></li>
         <li className='text-white hover:text-amber-500 text-xl'><Link to='/about'>About</Link></li>
         <li className='text-white hover:text-amber-500 text-xl'><Link to='/dashboard'>Dashboard</Link></li>
+        <li className='text-white hover:text-amber-500 text-xl'><Link to='/ContactUs'>Contact Us</Link></li>
 
     </>
     return (
