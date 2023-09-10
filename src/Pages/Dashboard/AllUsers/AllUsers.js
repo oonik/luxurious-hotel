@@ -24,7 +24,7 @@ const AllUsers = () => {
         <div>
 
         <div className="overflow-x-auto">
-            <table className="table table-auto min-w-full">
+            <table className="table table-auto">
                 <thead>
                     <tr>
                         <th></th>

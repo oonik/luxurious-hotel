@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const BookingModal = ({ room }) => {
+    const {user} = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const bookingRoom = data => {
@@ -43,7 +45,7 @@ const BookingModal = ({ room }) => {
                             </div>
 
                             <div>
-                                <input type='email' placeholder='Your email' {...register("email", { required: "Email is required" })} className="input input-bordered w-full mb-2" />
+                                <input type='email' placeholder='Your email' defaultValue={user?.email} {...register("email", { required: "Email is required" })} className="input input-bordered w-full mb-2" />
                                 {errors.email && <p role="alert" className='text-red-400'>{errors.email?.message}</p>}
                             </div>
                         </div>
