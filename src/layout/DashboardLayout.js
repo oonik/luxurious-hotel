@@ -23,8 +23,12 @@ const DashboardLayout = () => {
                       user?.email && <li><Link to='/dashboard/myBookings'>My Booking</Link></li>
                     }
                     {
-                     isAdmin && <li><Link to='/dashboard/allUser'>All User</Link></li> 
+                     isAdmin && <>
+                     <li><Link to='/dashboard/allUser'>All User</Link></li> 
+                     <li><Link to='/dashboard/contactMessage'>Contact Message</Link></li>
+                     </>
                     }
+                    
                 </ul>
             </div>
         </div>

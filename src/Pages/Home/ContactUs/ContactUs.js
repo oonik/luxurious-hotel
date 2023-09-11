@@ -1,12 +1,34 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import Map from '../../../Shared/Map/Map';
+import { toast } from 'react-toastify';
 
 const ContactUs = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const handleContact = (data) => {
-        console.log(data)
+        fetch('http://localhost:5000/contact', {
+            method: "POST",
+            headers: {
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.acknowledged){
+                toast.success('Successfully submit your message',{
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+            }
+        });
     };
     return (
         <div className='lg:flex items-center m-10 bg-amber-500 p-1'>
@@ -14,8 +36,8 @@ const ContactUs = () => {
                 <Map></Map>
             </div>
             <div className='lg:w-1/2'>
-                <form className='card-body'>
-                    <h4 className='text-3xl font-bold text-center mb-3 text-white'>CONTACT US</h4>
+                <form onSubmit={handleSubmit(handleContact)} className='card-body'>
+                    <h4 className='text-3xl font-bold text-center text-white'>CONTACT US</h4>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>
@@ -44,6 +66,7 @@ const ContactUs = () => {
                         {errors.number && <p role="alert" className='text-red-500'>{errors.number?.message}</p>}
                     </div>
                     <textarea {...register("request")} className="textarea textarea-bordered w-full mt-2" placeholder="Special request"></textarea>
+                    <button type="submit" className='btn w-full bg-gray-400 text-white'>send</button>
                 </form>
             </div>
         </div>
