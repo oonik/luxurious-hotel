@@ -3,7 +3,6 @@ import RoomCard from './RoomCard/RoomCard';
 import Loading from '../../Shared/Loading/Loading';
 import BookingModal from '../../Shared/BookingModal/BookingModal';
 import { useState } from 'react';
-import PrivateRoute from '../../Routes/PrivateRoute/PrivateRoute';
 
 const OurRoom = () => {
     const [room, setRoom] = useState(null);

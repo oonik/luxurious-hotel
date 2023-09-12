@@ -71,7 +71,7 @@ const MyBooking = () => {
                                     <label
                                         onClick={() => setBook(book)}
                                         htmlFor="confirmation_modal"
-                                        className="btn btn-sm bg-amber-500">Delete</label>
+                                        className="btn btn-sm bg-amber-500 text-white">Delete</label>
                                 </td>
                             </tr>)
                         }

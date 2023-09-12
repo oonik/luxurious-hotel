@@ -8,7 +8,7 @@ const Banner = () => {
         <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
                 <div className='slide1-img'> 
-                <img src={slide1} alt='' className="w-full bg-blend-darken" />
+                <img src={slide1} alt='' className="w-full bg-blend-darken backdrop-blur-sm" />
                 </div>
                 <div className='hidden lg:block absolute  flex-col transform -translate-y-1/2  lg:left-1/3  top-1/2 text-white'>
                     <h4 className='text-center font-bold text-2xl'>LUXURY LIVING</h4>
