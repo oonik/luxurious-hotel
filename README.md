@@ -1,3 +1,33 @@
+<!-- Features Used -->
+
+<!-- 
+1. Luxurious Hotel Room Booking Website.
+2. Click Book Now Button Open Booking Modal.
+3. Booking form data handle by React hook form.
+4. User login and sign up page , user handle by firebase.
+5. Each user can view and delete his booked tickets.
+6. There is an admin router. Admin can see all users and bookings.
+7. Context API is used to access user data from any router
+8. Json Web Token is used to protect the API
+ -->
+
+<!-- Technology Used -->
+
+<!-- 
+1. React.js
+2. Javascript(ES6)
+3. Tailwind CSS 
+4. Daisy UI
+5. Firebase 
+6. React Router Dom
+7. React Hook Form
+8. Context API
+9. React Google Map
+ -->
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

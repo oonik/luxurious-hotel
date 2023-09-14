@@ -18,7 +18,7 @@ const RoomCard = ({ room, setRoom }) => {
             <div className="card rounded-none bg-base-100 shadow-xl">
                 <div className='relative'>
                     <figure><img src={picture} alt="Shoes" className='hover:scale-125 transition duration-500 cursor-pointer' /></figure>
-                    <p className='bg-amber-500 w-24 text-center text-white rounded absolute lg:top-52 left-3'>{price}</p>
+                    <p className='bg-amber-500 px-1 lg:w-24 text-center text-white rounded absolute lg:top-52 left-3'>{price}</p>
                 </div>
                 <div className="card-body">
                     <h2 className="card-title font-bold justify-between">
