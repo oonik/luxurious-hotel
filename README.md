@@ -22,6 +22,7 @@
 6. React Router Dom
 7. React Hook Form
 8. Context API
+9. TanStack Query(data fetch)
 9. React Google Map
  -->
 
