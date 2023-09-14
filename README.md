@@ -2,13 +2,13 @@
 
 <!-- 
 1. Luxurious Hotel Room Booking Website.
-2. Click Book Now Button Open Booking Modal.
-3. Booking form data handle by React hook form.
-4. User login and sign up page , user handle by firebase.
+2. Click the Book Now Button to Open the Booking Modal.
+3. Booking form data handled by React hook form.
+4. User login and sign up page, user handle by Firebase.
 5. Each user can view and delete his booked tickets.
 6. There is an admin router. Admin can see all users and bookings.
 7. Context API is used to access user data from any router
-8. Json Web Token is used to protect the API
+8. JSON Web Token is used to protect the API
  -->
 
 <!-- Technology Used -->
